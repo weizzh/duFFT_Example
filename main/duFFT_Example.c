@@ -108,8 +108,11 @@ void app_main(void)
 	In this example, a single DFT will be calculated at zero offset within the
 	array duFFT_TestBuffer[]. Calling duFFT_CalculateDft() initiates all required
 	processes according to the specified FFT design. */
-
-	duFFT_CalculateDft(duFFT_TestBuffer+0); // Calculate DFT at zero buffer offset
+	for(i=0; i<10000;i++)
+	{
+		duFFT_CalculateDft(duFFT_TestBuffer+0); 
+	}
+	// Calculate DFT at zero buffer offset
 	
 	/* Alternatively, if an FFT is required from say half way along the buffer,
 	the call to duFFT_CalculateDft() would be as follows.
